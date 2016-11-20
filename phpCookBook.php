@@ -4,7 +4,8 @@ $name = "deralation";
 
 //$substring = substr($string, $start, $lenght);
 
-$username = substr($name,0,8);
-var_dump($username);
+print substr($name,0,8)."<br>";
+
+print substr("watch out for that tree",17);
 
 ?>
