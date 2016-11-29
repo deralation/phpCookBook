@@ -1,6 +1,6 @@
 <?php  
 
-$name = "deralation";
+/*$name = "deralation";
 
 print substr($name,0,8)."<br>";
 
@@ -47,7 +47,7 @@ for ($i=0, $j = strlen($string); $i< $j; $i++) {
 		print $vowels;
 		$vowels++;
 	}
-}*/
+}
 
 
 function lookandsay($s){
@@ -78,8 +78,16 @@ function lookandsay($s){
 for ($i=0, $s = 1; $i < 10 ; $i++) { 
 	$s = lookandsay($s);
 	print "$s\n";
-}
+}*/
 
+print strrev("This is not a palindrome.");
+
+$s = "Once upon a time there was a turtle";
+$words = explode(" ",$s);
+$words = array_reverse($words);
+$s = implode(' ',$words);
+
+print $s;
 
 
 ?>
