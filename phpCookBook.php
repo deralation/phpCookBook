@@ -33,7 +33,7 @@ print substr_replace("My pet is a blue dog.", "Title: ", 0,0);
 
 $ob = mysql_fetch_object($r);
 
-printf('<a href="more-text.php?id=%id">%s</a>',$ob->id, substr_replace($ob->message, '...', 25));*/
+printf('<a href="more-text.php?id=%id">%s</a>',$ob->id, substr_replace($ob->message, '...', 25));
 
 print "\n";
 
@@ -47,7 +47,7 @@ for ($i=0, $j = strlen($string); $i< $j; $i++) {
 		print $vowels;
 		$vowels++;
 	}
-}
+}*/
 
 
 function lookandsay($s){
@@ -57,8 +57,7 @@ function lookandsay($s){
 	$m = $s[0];
 	// $n is the number of $m we have seen initalize to 1
 	$n = 1;
-	
-	for ($i=0, $i < strlen($s) ; $i < $j; $i++) { 
+	for ($i=1, $j = strlen($s) ; $i < $j; $i++) { 
 		// if this character is the same as the last one
 		if($s[$i] == $m){
 			// increment the count of this counter
@@ -73,7 +72,6 @@ function lookandsay($s){
 		}
 	}
 	// return the built up string as the last count and character 
-
 	return  $r.$n.$m;
 }
 
