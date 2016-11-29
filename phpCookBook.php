@@ -80,14 +80,36 @@ for ($i=0, $s = 1; $i < 10 ; $i++) {
 	print "$s\n";
 }*/
 
-print strrev("This is not a palindrome.");
+//print strrev("This is not a palindrome.");
 
 $s = "Once upon a time there was a turtle";
 $words = explode(" ",$s);
 $words = array_reverse($words);
 $s = implode(' ',$words);
 
-print $s;
+//print $s;
+
+$reversed_s = implode(' ',array_reverse(explode(' ',$s)));
+
+//print $reversed_s;
+
+function str_rand($length = 32, $characters= '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'){
+	if(!is_int($length) || $length < 0){
+		return false;
+	}
+
+	$characters_lenght = strlen($characters) - 1;
+
+	$string = '';
+
+	for ($i = $length; $i > 0 ; $i--) { 
+		$string .= $characters[mt_rand(0,$characters_lenght)];
+	}
+	return $string;
+}
+
+
+print str_rand(16,'.-');
 
 
 ?>
